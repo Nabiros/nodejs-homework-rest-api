@@ -61,50 +61,44 @@
   },
   {
     "id": 123,
-    "name": {
-      "name": "Thomas Anderson",
-      "email": "neo.matrix@gmail.com",
-      "phone": "(555) 691-2534"
-    }
+    "name": "Thomas Anderson",
+    "email": "neo.matrix@gmail.com",
+    "phone": "(555) 691-2534"
   },
   {
     "id": 245,
-    "name": {
-      "name": "Bruce Whayne",
-      "email": "batman@gmail.com",
-      "phone": "(555) 319-4521"
-    }
+    "name": "Bruce Whayne",
+    "email": "batman@gmail.com",
+    "phone": "(555) 319-4521"
   },
   {
     "id": 543,
-    "name": {
-      "name": "Ryine Reinolds",
-      "email": "deadpool@gmail.com",
-      "phone": "(555) 121-4121"
-    }
+    "name": "Ryine Reinolds",
+    "email": "deadpool@gmail.com",
+    "phone": "(555) 121-4121"
   },
   {
     "id": 277,
-    "name": {
-      "name": "Toby Maguayer",
-      "email": "spider-man@gmail.com",
-      "phone": "(555) 121-4121"
-    }
+    "name": "Toby Maguayer",
+    "email": "spider-man@gmail.com",
+    "phone": "(555) 121-4121"
   },
   {
     "id": 54,
-    "name": {
-      "name": "Jonny Blaze",
-      "email": "gost-rider@gmail.com",
-      "phone": "(666) 343-6685"
-    }
+    "name": "Jonny Blaze",
+    "email": "gost-rider@gmail.com",
+    "phone": "(666) 343-6685"
   },
   {
     "id": 417,
-    "name": {
-      "name": "Dany De Vito",
-      "email": "little-man@egetlacus.ca",
-      "phone": "(112) 111-6685"
-    }
+    "name": "Dany De Vito",
+    "email": "little-man@egetlacus.ca",
+    "phone": "(112) 111-6685"
+  },
+  {
+    "id": 51,
+    "name": "Bard Simpson",
+    "email": "badboy@vestibul.co.uk",
+    "phone": "(123) 321-2313"
   }
 ]
