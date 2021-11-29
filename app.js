@@ -4,19 +4,6 @@ const logger = require('morgan')
 const cors = require('cors')
 const contactsRouter = require('./routes/api/contacts')
 const app = express()
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
-
-dotenv.config()
-
-const {DB_HOST} = process.env;
-
-mongoose.connect(DB_HOST)
-  .then(() => console.log('db connect'))
-  .catch(err => {
-    console.log(err.message)
-    process.exit(1);
-  })
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short'
 
