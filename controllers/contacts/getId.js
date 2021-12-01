@@ -1,16 +1,24 @@
-const contactsOperations = require('../../model/contacts/index');
+const { Contact } = require('../../models');
+const { NotFound } = require('http-errors');
+const mongoose = require('mongoose');
 
 const getId = async (req, res, next) => {
     try {
         const { contactId } = req.params;
-        const result = await contactsOperations.getContactById(contactId);
+        const isValidId = mongoose.Types.ObjectId.isValid(contactId);
 
-        if (!result) {
-            const err = new Error(`not found ${contactId}`);
-            err.status = 404;
-            throw err;
-        }
-        res.json({ data: result });
+        if (!isValidId)
+            throw new NotFound(`id ${contactId} not found `);
+        
+        const result = await Contact.findById(contactId);
+
+        res.json({
+            status: 'success',
+            code: 200,
+            data: {
+                result
+            }
+        });
     } catch (err) {
         next(err);
     }

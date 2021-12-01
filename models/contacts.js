@@ -9,9 +9,11 @@ const contactSchema = Schema(
     },
     email: {
       type: String,
+      required: [true, "Set email"],
     },
     phone: {
       type: String,
+      required: [true, "Set phone Number"],
     },
     favorite: {
       type: Boolean,
@@ -30,14 +32,14 @@ const joiContactsSchema = Joi.object({
     phone: Joi.string().min(8).max(20).required(),
 });
 
-const statusSchema = Joi.object({
-    favorite: Joi.boolean().required(),
+const favoriteSchema = Joi.object({
+    favorite: Joi.boolean(),
 });
 
 const Contact = model('contact', contactSchema);
 
 module.exports = {
     joiContactsSchema,
-    statusSchema,
-    Contact,
+    favoriteSchema,
+    Contact
 };

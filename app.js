@@ -1,9 +1,10 @@
 // password = A100200300
 const express = require('express')
 const logger = require('morgan')
-const cors = require('cors')
 const contactsRouter = require('./routes/api/contacts')
 const app = express()
+const cors = require('cors')
+require('dotenv').config()
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short'
 
