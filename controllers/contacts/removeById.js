@@ -3,8 +3,7 @@ const { NotFound } = require('mongoose');
 const { Contact } = require('../../models');
 
 const removeById = async (req, res, next) => {
-    try {
-        const { contactId } = req.params;
+    const { contactId } = req.params;
 
         const result = await Contact.findByIdAndRemove(contactId);
 
@@ -16,9 +15,6 @@ const removeById = async (req, res, next) => {
             code: 200,
             message: 'contact deleted'
         });
-    } catch (err) {
-        next(err);
-    }
 };
 
 module.exports = removeById;

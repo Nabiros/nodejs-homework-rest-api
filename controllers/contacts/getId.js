@@ -3,8 +3,7 @@ const { NotFound } = require('http-errors');
 const mongoose = require('mongoose');
 
 const getId = async (req, res, next) => {
-    try {
-        const { contactId } = req.params;
+    const { contactId } = req.params;
         const isValidId = mongoose.Types.ObjectId.isValid(contactId);
 
         if (!isValidId)
@@ -19,9 +18,6 @@ const getId = async (req, res, next) => {
                 result
             }
         });
-    } catch (err) {
-        next(err);
-    }
 };
 
 module.exports = getId;
